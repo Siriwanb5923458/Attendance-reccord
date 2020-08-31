@@ -20,7 +20,7 @@
     <div id="form_wrapper">
         
         <div id="form_left">
-            <!-- <img src="img/WD.png" alt="WD icon"> -->
+            <img src="img/Logo.png" alt="WD icon">
         </div>
         
         <div id="form_right">
