@@ -5,9 +5,17 @@ $name = $_POST['name'];
 $id = $_POST['id'];
 $department = $_POST['department'];
 $time = $_POST['time'];
+$ttype = $_POST['ttype'];
+$curdate = $_POST['date'];
 
-
-$sql_ins = "INSERT INTO `reccord`(`id`, `name`,`department`,`time`) VALUES ('$id','$name','$department','$time')";
+if($ttype=="in"){
+  $sql_ins = "INSERT INTO `reccord`(`id`, `name`,`department`,`time`,`date`) VALUES ('$id','$name','$department','$time','$curdate')";
 $stmt = $con->prepare($sql_ins);
-$stmt->execute(); 
+$stmt->execute();   
+}
+if($ttype=="out"){
+    $sql_ins = "INSERT INTO `reccord_out`(`id`, `name`,`department`,`time`,`date`) VALUES ('$id','$name','$department','$time','$curdate')";
+  $stmt = $con->prepare($sql_ins);
+  $stmt->execute();   
+  }
 ?>

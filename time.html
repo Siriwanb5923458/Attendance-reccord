@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Attendance Record</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="myscript.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet"></script>
-    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clock {
+  height: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-family: sans-serif;
+  line-height: 20.4px;
+  display: flex;
+  position: relative;
+  /*background: green;*/
+  overflow: hidden;
+}
+.clock > div {
+  display: flex;
+}
 
+.tick {
+  line-height: 17px;
+}
+
+.tick-hidden {
+  opacity: 0;
+}
+
+.move {
+  animation: move linear 1s infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-20vh);
+  }
+}
+
+
+</style>
 <body>
-    <input name="hideid" class="hiddenInput" type="text" value="" id="hideid" onchange="changeText(this.value)"/>
-    <input disabled style="top:5px; right:5px; position: absolute; width: 150px;" type="submit" value="Login" id='input_submit' class='input_field'>
-    <div id="form_wrapper">
-        
-        <div id="form_left">
-            <div class="container-fluid">
-            <div class="row"><img src="img/WD.png" alt="WD icon"></div>
-            <div class="row" style="bottom:0;margin-top:250px;"> <div class="clock">
+    <div class="clock">
         <div class="hours">
           <div class="first">
             <div class="number">0</div>
@@ -49,42 +77,12 @@
             <div class="number">0</div>
           </div>
         </div>
-      </div></div>
-            </div>
-        </div>
-        
-        <div id="form_right">
-            <h1>Attendance Record</h1>
-            <div class="input_container">
-                <i class="fa fa-id-badge"></i>
-                <input placeholder="Name" type="text" name="Email" id="name" class='input_field'>
-            </div>
-            <div class="input_container">
-                <i class="fas fa-fingerprint"></i>
-              <input placeholder="Student ID" type="text" name="Std" id="id" class='input_field'>
-          </div>
-            <div class="input_container">
-                <i class="far fa-building"></i>
-                <input  placeholder="Department" type="text" name="Dpt" id="department" class='input_field'>
-            </div>
-            <div class="input_container">
-                <i class="far fa-clock"></i>
-              <input placeholder="Time" type="text" name="time" id="time" class='input_field'>
-          </div>
-          <div class="input_container">
-          <i class="far fa-calendar-alt"></i>
-              <input placeholder="Date" type="text" name="date" id="date" class='input_field'>
-          </div>
-
-            
-        </div>
-    </div>
+      </div>
 </body>
 <script>
 var hoursContainer = document.querySelector('.hours')
 var minutesContainer = document.querySelector('.minutes')
 var tickElements = Array.from(document.querySelectorAll('.tick'))
-var secondsContainer = document.querySelector('.seconds')
 
 var last = new Date(0)
 last.setUTCHours(-1)

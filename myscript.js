@@ -16,8 +16,21 @@ function changeText(id) {
   var department = document.getElementById("department");
   var time = document.getElementById("time");
   var hid = document.getElementById("hideid");
+  var date = document.getElementById("date");
+  
   var d = new Date();
+  var hours = d.getHours();
+  var month = d.getMonth() + 1;
+  var curdate = d.getDate()+"/"+month+"/"+d.getFullYear();
   var curtime = d.getHours() + " : " + d.getMinutes();
+  var timetype = "";
+  
+  if (hours<8){
+    timetype = "in";
+  }
+  if (hours>17){
+    timetype = "out";
+  }
 
   htm.open("POST", "getname.php", true);
   htm.onreadystatechange = function () {
@@ -26,6 +39,7 @@ function changeText(id) {
 
       for (var obj in data) {
         if (id == data[obj].rfid) {
+          date.value = curdate;
           name.value = data[obj].name;
           empid.value = data[obj].std_id;
           department.value = data[obj].department;
@@ -38,9 +52,13 @@ function changeText(id) {
               id: data[obj].std_id,
               department: data[obj].department,
               time: curtime,
+              ttype:timetype,
+              date: curdate,
             },
             success: function (data) {
               console.log("Upload successfully");
+              console.log(timetype);
+
             },
           });
           break;
