@@ -25,10 +25,10 @@ function changeText(id) {
   var curtime = d.getHours() + " : " + d.getMinutes();
   var timetype = "";
   
-  if (hours<8){
+  if (hours<7){
     timetype = "in";
   }
-  if (hours>17){
+  if (hours>16){
     timetype = "out";
   }
 
