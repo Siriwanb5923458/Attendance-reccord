@@ -20,15 +20,16 @@ function changeText(id) {
   
   var d = new Date();
   var hours = d.getHours();
+  var minute = d.getMinutes();
   var month = d.getMonth() + 1;
   var curdate = d.getDate()+"/"+month+"/"+d.getFullYear();
-  var curtime = d.getHours() + " : " + d.getMinutes();
+  var curtime = hours + " : " + minute;
   var timetype = "";
   
-  if (hours<7){
+  if ((hours>0 && hours<12)||(hours== 12 && minute<31)){
     timetype = "in";
   }
-  if (hours>16){
+  if ((hours==12&&minute>30)||hours>12||hours<1){
     timetype = "out";
   }
 

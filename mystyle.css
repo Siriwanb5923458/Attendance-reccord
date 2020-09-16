@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'HelveticaLT';
+    src: url('font/HelveticaNeueLTStd-Lt.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body{
+    font-family: 'HelveticaLT'!important;
+  }
+label{
+    margin-left:15px;
+}
+input{
+    margin-left:15px;
+    height: 25px;
+}
+.round-input{
+    border-radius: 15px;
+    border-style: solid 0.5px;
+    border-width: thin;
+}
+button{
+    text-align: center;
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+.round {
+position: relative;
+}
+
+.round label {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 50%;
+cursor: pointer;
+height: 28px;
+left: 0;
+position: absolute;
+top: 0;
+width: 28px;
+}
+
+.round label:after {
+border: 2px solid #fff;
+border-top: none;
+border-right: none;
+content: "";
+height: 6px;
+left: 7px;
+opacity: 0;
+position: absolute;
+top: 8px;
+transform: rotate(-45deg);
+width: 12px;
+}
+
+.round input[type="checkbox"] {
+visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+background-color: #66bb6a;
+border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+opacity: 1;
+}
+.navbar {
+width: 100%;
+background-color: rgb(204, 204, 204);
+overflow: auto;
+padding: 0;
+}
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+.navbar {
+width: 100%;
+background-color: rgb(204, 204, 204);
+overflow: auto;
+padding: 0;
+}
+
+.navbar a {
+float: left;
+padding: 12px;
+color: rgb(255, 255, 255);
+width: auto !important;
+background-color: transparent;
+text-decoration: none;
+font-size: 17px;
+width: 25%; /* Four links of equal widths */
+text-align: center;
+}
+
+.navbar a:hover {
+background-color: #000;
+}
+
+.navbar a.active {
+background-color: #030803;
+}
+
+@media screen and (max-width: 500px) {
+.navbar a {
+float: none;
+display: block;
+width: 100%;
+text-align: left;
+}
+}
+.container {
+position: relative;
+text-align: center;
+color: white;
+}
+
+.bottom-left {
+position: absolute;
+bottom: 8px;
+left: 16px;
+}
+
+.top-left {
+position: absolute;
+top: 45px;
+left: 16px;
+color: white;
+}
+
+.top-right {
+position: absolute;
+top: 8px;
+right: 16px;
+}
+
+.bottom-right {
+position: absolute;
+bottom: 8px;
+right: 16px;
+}
+
+.centered {
+position: absolute;
+top: 65%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+}

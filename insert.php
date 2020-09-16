@@ -9,7 +9,7 @@ $ttype = $_POST['ttype'];
 $curdate = $_POST['date'];
 
 if($ttype=="in"){
-  $sql_ins = "INSERT INTO `reccord`(`id`, `name`,`department`,`time`,`date`) VALUES ('$id','$name','$department','$time','$curdate')";
+  $sql_ins = "INSERT INTO `reccord_in`(`id`, `name`,`department`,`time`,`date`) VALUES ('$id','$name','$department','$time','$curdate')";
 $stmt = $con->prepare($sql_ins);
 $stmt->execute();   
 }
