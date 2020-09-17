@@ -9,160 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="main.css"> -->
+        <link rel="stylesheet" href="mystyle.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-        <style>
-            label{
-                margin-left:15px;
-            }
-            input{
-                margin-left:15px;
-                height: 25px;
-            }
-            .round-input{
-                border-radius: 15px;
-                border-style: solid 0.5px;
-                border-width: thin;
-            }
-            button{
-                text-align: center;
-                display: flex;
-    align-items: center;
-    justify-content: center;
-            }
-            .round {
-  position: relative;
-}
-
-.round label {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  
-}
-
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: black;
-  width: auto !important;
-  background-color: chartreuse;
-  text-decoration: none;
-  font-size: 17px;
-  width: 25%; /* Four links of equal widths */
-  text-align: center;
-}
-.navbar a:hover {
-  background-color: #000;
-}
-.navbar a.active {
-  background-color: #4CAF50;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-
-.navbar {
-  width: 100%;
-  background-color: rgb(204, 204, 204);
-  overflow: auto;
-  padding: 0;
-}
-
-.round label:after {
-  border: 3px solid #fff;
-  border-top: none;
-  border-right: none;
-  content: "";
-  height: 12px;
-  left: 8px;
-  opacity: 0;
-  position: absolute;
-  top: 10px;
-  transform: rotate(-45deg);
-  width: 20px;
-}
-
-.round input[type="checkbox"] {
-  visibility: hidden;
-}
-
-.round input[type="checkbox"]:checked + label {
-  background-color: #66bb6a;
-  border-color: #66bb6a;
-}
-
-.round input[type="checkbox"]:checked + label:after {
-  opacity: 1;
-}
-table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-}
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.top-left {
-  position: absolute;
-  top: 45px;
-  left: 16px;
-  color: white;
-}
-
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-.centered {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-        </style>
+        
 <body>
     
 <!-- ใส่ Header -->
@@ -170,7 +21,7 @@ table {
 
 <div class="navbar" style="background-color: white;">
     <div class="container-fluid">
-        <div class="row" style="width: 150%; background-color: chartreuse;">
+        <div class="row" style="width: 150%; background-image: linear-gradient(to right, #5A80D1 , #21A7B2);">
         <a class="active" href="#">Attendence</a> 
         <a href="#">Code ID</a> 
         <a href="#">Salary Rate</a> 
@@ -180,13 +31,13 @@ table {
         </div>
     </div>
     <div class="container-fluid"style="padding: 0;">
-      <img src="img/work2.JPG" width="100%" height="100">
-      <div class="bottom-left"></div>
-      <div class="top-left" style="font-size: 20px;" >Western Digital</div>
-      <div class="top-right"></div>
-      <div class="bottom-right"></div>
-      <div class="centered"style="font-size: 40px;">Trainees Attendence Record </div>
-    </div>
+      <img src="img/navbar.png" width="100%" height="auto">
+        <div class="bottom-left"></div>
+        <!-- <div class="top-left" style="font-size: 20px; margin-top: 8px;" >Western Digital</div> -->
+        <div class="top-right"></div>
+        <div class="bottom-right"></div>
+        <div class="centered" style="font-size: 40px;">Trainees Attendence Record </div>
+      </div>
   </div>
 <div class="container-fluid">
     <!-- row 1 -->
