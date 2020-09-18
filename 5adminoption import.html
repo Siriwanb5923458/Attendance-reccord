@@ -11,23 +11,23 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="mystyle.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
-       
+  
 <body>
     
 <!-- ใส่ Header -->
 <!-- จบ header -->
 
 <div class="navbar" style="background-color: white;">
-  <div class="container-fluid">
-        <div class="row" style="width: 120%; background-image: linear-gradient(to right, #5A80D1 , #21A7B2);">
+    <div class="container-fluid">
+        <div class="row" style="width: 150%; background-image: linear-gradient(to right, #5A80D1 , #21A7B2);">
         <a class="active" href="#">Attendence</a> 
         <a href="#">Summary</a> 
-        <a href="#">Salary Rate</a> 
         <a href="#">Salary Month</a>
-        <a href="#">Export</a>
+        <a href="#">Option</a>
         <a href="#">Logout</a>
-         </div>
+        </div>
     </div>
     <div class="container-fluid"style="padding: 0;">
       <img src="img/navbar.png" width="100%" height="auto">
@@ -44,18 +44,20 @@
     <!-- row 1 -->
     <div class="row" style="padding-top: 20px;">
         <div class="container-fluid">
-            <div class="row" style="padding-top: 20px;"><label >Student ID:</label><input type="text" class="round-input" style="width:200px;"> 
-            <div class="col-sm-4-xs-4"><label >Name:</label><input type="text" class="round-input" style="width:200px;"></div>    
-            <div class="col-sm-4-xs-4"><label >Department:</label><input type="text" class="round-input" style="width:200px;"></div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-                <div class="col-sm-4-xs-4"><label >Supervisor:</label><input type="text" class="round-input" style="width:200px;"></div>
-                <div class="col-sm-4-xs-4"><label >Training Period :</label><input type="text" class="round-input" style="width:100px;"> <label>To</label> <input type="text" class="round-input" style="width:100px;"></div>
-                <div class="col-sm-4-xs-4"><label >Location:</label><input type="text" class="round-input" style="width:200px;"></div>
-                <div class="bt-box" style="height: 15px;margin-left:15px;"><button type="button" class="btn-block btn-light btn-outline-dark" style="border-radius: 15px;"><label style="margin-left:0px;font-size: 12px;margin-bottom: .3rem;">Search</label></button></div>
-            </div>
-            <hr>
-          </body>
-          </html>
-          
-            
+            <div class="row" style="background-color:black ;"><label style="color:white;margin-top:.5rem;">Import & Update Information</label></div>   
+        </div>
+        <div class="row d-flex justify-content-center" style="padding-top: 30px;" align ="center" style="display: flex;justify-content:center;">
+          <div class="col-sm-6-xs-6" >
+              <input type="file" class="form-control-file" id="exampleFormControlFile1" style="height: fit-content;"/>
+              
+           <div class="form-check" style="padding-top: 5px;;">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label  for="exampleCheck1" style="margin-left: 0px;padding-top:5px;">Update data with Trainees.xis</label>
+            </div></div>
+            <div class="col-sm-6-xs-6" ><button type="button" class="btn-block btn-light btn-outline-dark" style="border-radius: 15px;"><label style="margin-left:0px;font-size: 12px;margin-bottom: .3rem;padding :0px 15px;">Update</label></button></div>
+          </div>
+      </div></div>
+    </div>
+</div>
+</body>
+</html>

@@ -23,10 +23,9 @@
     <div class="container-fluid"style="padding:0;background-color: chartreuse;">
         <div class="row" style="width: 100%; background-image: linear-gradient(to right, #5A80D1 , #21A7B2);">
         <a class="active" href="#">Attendence</a> 
-        <a href="#">Summary</a> 
-        <a href="#">Salary Rate</a> 
+        <a href="#">Summary</a>  
         <a href="#">Salary Month</a>
-        <a href="#">Export</a>
+        <a href="#">Option</a>
         <a href="#">Logout</a>
          </div>
     </div>
@@ -45,26 +44,52 @@
     <!-- row 1 -->
     <div class="row" style="padding-top: 20px;">
         <div class="container-fluid">
-            <div class="row" style="padding-top: 20px;"><label >Student ID:</label><input type="text" class="round-input" style="width:200px;"> 
-            <div class="col-sm-4-xs-4"><label >Name:</label><input type="text" class="round-input" style="width:200px;"></div>    
-            <div class="col-sm-4-xs-4"><label >Department:</label><input type="text" class="round-input" style="width:200px;"></div>
+            <div class="row" style="padding-top: 20px;">
+            <div class="col-sm-4-xs-4">Period :<select name="month" id="month">
+                <option value="" selected="selected">Select Month</option>
+              </select></div>    
+            <div class="col-sm-4-xs-4"><select name="month" id="month">
+                <option value="" selected="selected">Select Day to day</option>
+              </select></div>
+            <div class="col-sm-4-xs-4"><select name="month" id="month">
+                <option value="" selected="selected">Year</option>
+              </select></div>
             </div>
-            <div class="row" style="padding-top: 10px;">
-                <div class="col-sm-4-xs-4"><label >Supervisor:</label><input type="text" class="round-input" style="width:200px;"></div>
-                <div class="col-sm-4-xs-4"><label >Training Period :</label><input type="text" class="round-input" style="width:100px;"> <label>To</label> <input type="text" class="round-input" style="width:100px;"></div>
-                <div class="col-sm-4-xs-4"><label >Location:</label><input type="text" class="round-input" style="width:200px;"></div>
-                <div class="bt-box" style="height: 15px;margin-left:15px;"><button type="button" class="btn-block btn-light btn-outline-dark" style="border-radius: 15px;"><label style="margin-left:0px;font-size: 12px;margin-bottom: .3rem;">Search</label></button></div>
+            <div class="row" style="padding-top: 10px;"></div>
+                <div class="col-sm-4-xs-4">Department :<select name="month" id="month">
+                    <option value="" selected="selected">All</option>
+                  </select></div>
+                  <div class="row" style="padding-top: 10px;"></div>
+                <div class="col-sm-4-xs-4">Trainess type :<select name="month" id="month">
+                        <option value="" selected="selected">All</option>
+                      </select></div>
+                      <div class="row" style="padding-top: 10px;"></div>
+                <div class="col-sm-4-xs-4">Total Public Holiday :<select name="month" id="month">
+                            <option value="" selected="selected">0</option>
+                          </select></div>
+                        
+                    
+                
             </div>
             <hr>
             <table >
               <tr>
                 <th>Student ID</th>
                 <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Degree</th> 
                 <th>Department</th>      
-                <th>Date</th>
-                <th>Time in</th>
-                <th>Time Out</th>     
-                <th>Total Daily</th>
+                <th>Supervisor</th>
+                <th>Day</th>
+                <th>Rate Day</th>     
+                <th>Total </th>
+                <th>CC</th>
+                <th>Account No.</th>
+                <th>Days/Daily</th>
+                <th>Days/Monthly</th>  
+                <th>Sarary Rate</th> 
+                <th>Total</th> 
               </tr>
               </table>
         </div>
